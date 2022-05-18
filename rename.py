@@ -132,8 +132,11 @@ class Rename:
 		error = list()
 
 		for file in files:
-			if int(file.split('\\')[-1].split('.')[0]) in range(start_number, final_number):
-				error.append(file.split('\\')[-1])
+			try:
+				if int(file.split('\\')[-1].split('.')[0]) in range(start_number, final_number):
+					error.append(file.split('\\')[-1])
+			except ValueError:
+				pass
 
 		return error
 
@@ -148,7 +151,7 @@ class Rename:
 		files = glob.glob(f"{path}/*.*")
 
 		for i, file in enumerate(files):
-			new_name = f"{str(i + 1 + from_).zfill(len(str(len(files))))}"
+			new_name = f"{str(i + from_).zfill(len(str(len(files))))}"
 			print(f"{file} -> {path}\\{new_name}{pathlib.Path(file).suffix}")
 
 			if os.path.isfile(file):

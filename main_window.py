@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
 					print("Rename is done!")
 
 			except ValueError:
-				with open("Messages/number_of_line.html", "r") as f:
+				with open("Messages/input_number.html", "r") as f:
 					self.pop_up(f.read())
 		else:
 			self.pop_up("The path is not exist!")
