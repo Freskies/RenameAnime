@@ -7,12 +7,18 @@
 <body>
 <h3>How does it work?</h3>
 <p>
-	This program changes the name of all files in the selected folder except "name.txt"<br>
-	the number of files must be equal to the number of lines in the "name.txt" file<br>
-	The file must terminal with a black line<br>
-	the files are renamed: "(counter) - (filename from" name.txt "). (extension)"<br>
-	THERE MUST NOT BE folders that have "." in their name!<br>
-	THERE MUST NOT BE any other files that are not to be renamed!<br>
+	This program change the name of all files in the given directory (and subdirectories)<br>
+	according to the following rules:<br>
+	all the names are picked up from a file called "names.txt" (one name per line)<br>
+	"names.txt" must be in the same directory of the program<br>
+	obviously, the number of names must be equal to the number of files in the directory<br>
+	("names.txt" doesn't count as a file and is not considered)<br>
+	"names.txt" MUST finish with a blank line<br>
+	"names.txt" MUST NOT contain any blank line in the beginning or middle of the file<br>
+	is ILLEGAL to have a folder with a "." in the name<br>
+	Pay attention to the fact that the program will change the name of all the files in the directory<br>
+	and subdirectories, so be sure to have a backup of the files you want to keep!<br>
+	Enjoy!
 </p>
 </body>
 </html>
